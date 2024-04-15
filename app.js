@@ -147,13 +147,16 @@ async function getQuery(location) {
     //     const photos = await client.photos.search({ query, per_page: 1 })
     //     return { ...place, image_link: photos.photos[0].url }
     // })
-    for (let place of response.places) {
-        const query = place.name
-        const photos = await client.photos.search({ query, per_page: 1 })
-        console.log(query)
-        if (photos.photos[0] != null) {
+    try {
+        for (let place of response.places) {
+            const query = place.name
+            const photos = await client.photos.search({ query, per_page: 1 })
+            console.log(query)
             place.image_link = photos.photos[0].src.large
         }
+    }
+    catch (error) {
+        console.log(error)
     }
     //response.places = Places
     console.log("Json-------------------->", response, response.dayWiseItinerary)
@@ -167,6 +170,12 @@ router.post('/query', async (req, res) => {
     const response = await getQuery(query)
     res.status(200).json({ status: "success", data: response })
 })
+
+router.get('/hello', async (req, res) => {
+    console.log("Hello");
+    res.status(200).json({ status: "success" })
+})
+
 
 app.use('/api/v1', router)
 
