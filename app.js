@@ -131,7 +131,7 @@ async function getQuery(location) {
             },
             {
                 role: "user",
-                content: `Fetch a travel itenary for ${location}. i am an introvert and i love quiet places`
+                content: `Fetch a travel itenary for ${location}.`
             }
         ],
         model: "mixtral-8x7b-32768",
