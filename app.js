@@ -12,7 +12,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const client = createClient('IhcGlY1ZhLm51Ye71hrMT2rVm5C8ClniHyCIIAovFDkeHjz7JyKoAawJ');
+const client = createClient('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');
 
 const schema = {
 
