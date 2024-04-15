@@ -2,6 +2,7 @@
 const express = require("express")
 require('dotenv').config()
 const bodyParser = require('body-parser');
+const rateLimit = require('express-rate-limit');
 const Groq = require("groq-sdk");
 const groq = new Groq({ apiKey: "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" });
 const { createClient } = require('pexels');
@@ -149,7 +150,10 @@ async function getQuery(location) {
     for (let place of response.places) {
         const query = place.name
         const photos = await client.photos.search({ query, per_page: 1 })
-        place.image_link = photos.photos[0].url
+        console.log(query)
+        if (photos.photos[0] != null) {
+            place.image_link = photos.photos[0].src.large
+        }
     }
     //response.places = Places
     console.log("Json-------------------->", response, response.dayWiseItinerary)
@@ -167,16 +171,13 @@ router.post('/query', async (req, res) => {
 app.use('/api/v1', router)
 
 const port = process.env.PORT || 4000
-
+const limiter = rateLimit({
+    max: 500,
+    windowMs: 1000,
+    message: "too many requests from this IP ,try again in an hour"
+})
 
 const server = app.listen(port, () => {
     console.log(`Server is listening at port ${port}`);
 })
 
-process.on('unhandledRejection', (err) => {
-    console.log('UNHANDLED REJECTION! 💥 Shutting down...');
-    console.log(err.name, err.message);
-    server.close(() => {
-        process.exit(1);
-    });
-});
