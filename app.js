@@ -4,7 +4,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const Groq = require("groq-sdk");
-const groq = new Groq({ apiKey: "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" });
+const groq = new Groq({ apiKey: "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" });
 const { createClient } = require('pexels');
 const router = express.Router();
 
