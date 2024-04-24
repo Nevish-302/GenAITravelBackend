@@ -4,7 +4,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const Groq = require("groq-sdk");
-const groq = new Groq({ apiKey: "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" });
+const groq = new Groq({ apiKey: "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" });
 const { createClient } = require('pexels');
 const router = express.Router();
 
@@ -18,8 +18,7 @@ const schema = {
 
     properties: {
         places: {
-            title: "Place Name",
-            properties: {
+            items: {
                 required: [
                     "name", "location", "image_link", "description", "attraction", "VisitTime", "childrenAllowed"
                 ],
@@ -120,12 +119,15 @@ const schema = {
     type: "object"
 };
 const DayWiseSchema = {
-    title: "TravelItineary",
     items: {
         required: [
-            "time", "task", "budget", "image_link", "location"
+            "time", "day", "task", "budget", "image_link", "location"
         ],
         properties: {
+            day: {
+                type: "string",
+                title: "day"
+            },
             time: {
                 type: "string",
                 title: "time"
@@ -170,6 +172,7 @@ async function getQuery(location) {
             }
         ],
         model: "mixtral-8x7b-32768",
+        max_tokens: 6000,
         temperature: 0,
         stream: false,
         response_format: {
@@ -210,12 +213,13 @@ async function getDayWiseQuery(location) {
             },
             {
                 role: "user",
-                content: `Fetch a travel itenary for ${location}.`
+                content: `Fetch a travel itenary for ${location}. a`
             }
         ],
         model: "mixtral-8x7b-32768",
-        temperature: 0,
+        temperature: 1,
         stream: false,
+        max_tokens: 6000,
         response_format: {
             type: "json_object"
         }
