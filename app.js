@@ -172,7 +172,7 @@ async function getQuery(location) {
             }
         ],
         model: "mixtral-8x7b-32768",
-        max_tokens: 6000,
+        max_tokens: 20000,
         temperature: 0,
         stream: false,
         response_format: {
@@ -219,7 +219,7 @@ async function getDayWiseQuery(location) {
         model: "mixtral-8x7b-32768",
         temperature: 1,
         stream: false,
-        max_tokens: 6000,
+        max_tokens: 10000,
         response_format: {
             type: "json_object"
         }
