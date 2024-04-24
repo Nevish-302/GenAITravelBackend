@@ -445,7 +445,7 @@ async function getQuery(location) {
                 },
                 {
                     role: "user",
-                    content: `Fetch a travel itenary for ${location}. you can include clubs, bars, museums, forts, famous restaurants, hidden gems, also some other famous places like museums etc, at least have 3 places per day. also keep the costs to a minimum. `
+                    content: `Fetch a travel itenary for ${location}. you can include clubs, bars, forts, restaurants, hidden gems, also some other famous places like museums etc, at least have 3 places per day. also keep the costs to a minimum. `
                 }
             ],
             model: "mixtral-8x7b-32768",
