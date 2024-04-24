@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 const client = createClient('IhcGlY1ZhLm51Ye71hrMT2rVm5C8ClniHyCIIAovFDkeHjz7JyKoAawJ');
 
-const exampleresponse = {
+const exampleresponseDelhi = {
     "status": "success",
     "data": {
         "places": [
@@ -290,6 +290,412 @@ const exampleresponse = {
     }
 }
 
+const exampleresponseKerela = {
+    "status": "success",
+    "data": {
+        "places": [
+            {
+                "name": "Fort Kochi",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/12593493/pexels-photo-12593493.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "Historic fort with European colonial architecture",
+                "attraction": "History, Architecture",
+                "VisitTime": "3-4 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Mattancherry Palace",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/19474884/pexels-photo-19474884.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An old palace with Kerala murals depicting Hindu temple art",
+                "attraction": "History, Art",
+                "VisitTime": "1-2 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Chinese Fishing Nets",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/6875139/pexels-photo-6875139.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An ancient fishing technique used by Chinese explorers",
+                "attraction": "Culture, Fishing",
+                "VisitTime": "1 hour",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Jewish Synagogue",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/5986464/pexels-photo-5986464.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "The oldest active synagogue in the Commonwealth of Nations",
+                "attraction": "History, Religion",
+                "VisitTime": "1-2 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Museum of Kerala History",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/4365100/pexels-photo-4365100.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "A museum showcasing the history and culture of Kerala",
+                "attraction": "History, Culture",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Mangalavanam Bird Sanctuary",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/5745374/pexels-photo-5745374.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "A protected area near the Kochi port with diverse bird species",
+                "attraction": "Nature, Bird Watching",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Willingdon Island",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/19689333/pexels-photo-19689333.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An artificial island with port facilities and resorts",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Kerala Kathakali Centre",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/8610533/pexels-photo-8610533.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "A center for traditional Kerala arts, including Kathakali dance",
+                "attraction": "Culture, Performing Arts",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Paradesi Synagogue",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/15786474/pexels-photo-15786474.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An old Jewish synagogue with a unique interior design",
+                "attraction": "History, Religion",
+                "VisitTime": "1-2 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Kochi-Muziris Biennale",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/980180/pexels-photo-980180.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An international exhibition of contemporary art held in Kochi",
+                "attraction": "Art, Culture",
+                "VisitTime": "3-4 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Cherai Beach",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/6544756/pexels-photo-6544756.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "A beautiful beach with calm waters and lush greenery",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "3-4 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Bolgatty Palace",
+                "location": "Kochi, Kerela",
+                "image_link": "https://images.pexels.com/photos/19474884/pexels-photo-19474884.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "A Dutch palace converted into a heritage hotel",
+                "attraction": "History, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Kumarakom Bird Sanctuary",
+                "location": "Kottayam, Kerela",
+                "image_link": "https://images.pexels.com/photos/5745374/pexels-photo-5745374.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "A protected area near the Vembanad Lake with various bird species",
+                "attraction": "Nature, Bird Watching",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Vembanad Lake",
+                "location": "Kottayam, Kerela",
+                "image_link": "https://images.pexels.com/photos/21855744/pexels-photo-21855744.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "The longest lake in India, known for its backwaters and houseboats",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "3-4 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Kumarakom Backwaters",
+                "location": "Kottayam, Kerela",
+                "image_link": "https://images.pexels.com/photos/8588394/pexels-photo-8588394.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "A network of canals, lakes, and lagoons ideal for boat rides",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "4-5 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Pathiramanal Island",
+                "location": "Kottayam, Kerela",
+                "image_link": "https://images.pexels.com/photos/19689333/pexels-photo-19689333.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An uninhabited island in the Vembanad Lake",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Thazhathangady Juma Masjid",
+                "location": "Kottayam, Kerela",
+                "image_link": "https://images.pexels.com/photos/2079666/pexels-photo-2079666.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An old mosque with intricate woodwork and Arabic inscriptions",
+                "attraction": "History, Religion",
+                "VisitTime": "1-2 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "St. Mary's Church",
+                "location": "Kottayam, Kerela",
+                "image_link": "https://images.pexels.com/photos/19672856/pexels-photo-19672856.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "description": "An ancient Syrian Orthodox church with beautiful murals",
+                "attraction": "History, Religion",
+                "VisitTime": "1-2 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Illikkal Kallu",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/illikkal-kallu",
+                "description": "A massive rock formation with panoramic views of the surrounding valleys",
+                "attraction": "Nature, Adventure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "No"
+            },
+            {
+                "name": "Idukki Arch Dam",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/idukki-arch-dam",
+                "description": "The world's second-tallest arch dam, located in the Idukki reservoir",
+                "attraction": "Engineering, Nature",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Kalvari Mount",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/kalvari-mount",
+                "description": "A hill with a large cross and panoramic views of the Idukki reservoir",
+                "attraction": "Religion, Nature",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Anakkara",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/anakkara",
+                "description": "A scenic hill station with spice plantations and waterfalls",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "3-4 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Kuthumkal Waterfalls",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/kuthumkal-waterfalls",
+                "description": "A series of waterfalls cascading down a hillside",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Mangala Devi Temple",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/mangala-devi-temple",
+                "description": "An ancient temple dedicated to Goddess Kali, located in a dense forest",
+                "attraction": "History, Religion",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Periyar Wildlife Sanctuary",
+                "location": "Thekkady, Kerela",
+                "image_link": "https://example.com/periyar-wildlife-sanctuary",
+                "description": "A protected area with diverse flora and fauna, including elephants and tigers",
+                "attraction": "Nature, Wildlife",
+                "VisitTime": "4-5 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Thekkady Lake",
+                "location": "Thekkady, Kerela",
+                "image_link": "https://example.com/thekkady-lake",
+                "description": "A serene lake surrounded by lush greenery and wildlife",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Murikkady",
+                "location": "Thekkady, Kerela",
+                "image_link": "https://example.com/murikkady",
+                "description": "A scenic spot with spice plantations and waterfalls",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Pandikuzhi",
+                "location": "Thekkady, Kerela",
+                "image_link": "https://example.com/pandikuzhi",
+                "description": "A picturesque location with waterfalls and lush greenery",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Chellarkovil",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/chellarkovil",
+                "description": "A scenic village with a waterfall and panoramic views",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Vagamon",
+                "location": "Idukki, Kerela",
+                "image_link": "https://example.com/vagamon",
+                "description": "A scenic hill station with lush meadows and pine forests",
+                "attraction": "Nature, Leisure",
+                "VisitTime": "3-4 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Kurisumala",
+                "location": "Pathanamthitta, Kerela",
+                "image_link": "https://example.com/kurisumala",
+                "description": "A Christian pilgrimage center with a large cross and panoramic views",
+                "attraction": "Religion, Nature",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Gavi",
+                "location": "Pathanamthitta, Kerela",
+                "image_link": "https://example.com/gavi",
+                "description": "A scenic eco-tourism spot with a lake and diverse flora and fauna",
+                "attraction": "Nature, Wildlife",
+                "VisitTime": "4-5 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Konni Forest",
+                "location": "Pathanamthitta, Kerela",
+                "image_link": "https://example.com/konni-forest",
+                "description": "A protected area with diverse flora and fauna, including elephants",
+                "attraction": "Nature, Wildlife",
+                "VisitTime": "3-4 hours",
+                "childrenAllowed": "Yes"
+            },
+            {
+                "name": "Sabarimala Temple",
+                "location": "Pathanamthitta, Kerela",
+                "image_link": "https://example.com/sabarimala-temple",
+                "description": "A famous Hindu pilgrimage center dedicated to Lord Ayyappa",
+                "attraction": "Religion",
+                "VisitTime": "2-3 hours",
+                "childrenAllowed": "No"
+            }
+        ],
+        "dayWiseItinerary": [
+            {
+                "day": "Day 1",
+                "places": [
+                    "Fort Kochi",
+                    "Mattancherry Palace",
+                    "Chinese Fishing Nets"
+                ]
+            },
+            {
+                "day": "Day 2",
+                "places": [
+                    "Jewish Synagogue",
+                    "Museum of Kerala History",
+                    "Mangalavanam Bird Sanctuary"
+                ]
+            },
+            {
+                "day": "Day 3",
+                "places": [
+                    "Willingdon Island",
+                    "Kerala Kathakali Centre",
+                    "Paradesi Synagogue"
+                ]
+            },
+            {
+                "day": "Day 4",
+                "places": [
+                    "Kochi-Muziris Biennale",
+                    "Cherai Beach",
+                    "Bolgatty Palace"
+                ]
+            },
+            {
+                "day": "Day 5",
+                "places": [
+                    "Kumarakom Bird Sanctuary",
+                    "Vembanad Lake",
+                    "Kumarakom Backwaters"
+                ]
+            },
+            {
+                "day": "Day 6",
+                "places": [
+                    "Pathiramanal Island",
+                    "Thazhathangady Juma Masjid",
+                    "St. Mary's Church"
+                ]
+            },
+            {
+                "day": "Day 7",
+                "places": [
+                    "Illikkal Kallu",
+                    "Idukki Arch Dam",
+                    "Kalvari Mount"
+                ]
+            }
+        ],
+        "totalTravelTime": "Approx. 2-3 hours of travel time per day",
+        "hotels": [
+            "Hotel A",
+            "Hotel B",
+            "Hotel C",
+            "Hotel D",
+            "Hotel E",
+            "Hotel F",
+            "Hotel G"
+        ],
+        "estimatedCost": {
+            "accomodation": "INR 1000-2000 per night",
+            "activities": "INR 500-1000 per day",
+            "food": "INR 500-1000 per day",
+            "transport": "INR 500-1000 per day"
+        },
+        "experiences": [
+            "Houseboat ride",
+            "Ayurvedic massage",
+            "Kathakali dance performance",
+            "Spice plantation tour",
+            "Elephant safari",
+            "Tea tasting",
+            "Cooking class"
+        ],
+        "transport": [
+            "Flight",
+            "Train",
+            "Bus",
+            "Taxi",
+            "Auto-rickshaw",
+            "Ferry",
+            "Bicycle"
+        ]
+    }
+}
+
 const schema = {
 
     properties: {
@@ -445,7 +851,7 @@ async function getQuery(location) {
                 },
                 {
                     role: "user",
-                    content: `Fetch a travel itenary for ${location}. you can include clubs, bars, forts, restaurants, hidden gems, also some other famous places like museums etc, at least have 3 places per day. also keep the costs to a minimum. `
+                    content: `Fetch a travel itinerary for ${location}. Also the daywise itinerary should be arranged in such a way that places closer to each other occur on same day. you can include clubs, bars, forts, restaurants, hidden gems, also some other famous places like museums etc, at least have 3 places per day. also keep the accomodation costs to a minimum. `
                 }
             ],
             model: "mixtral-8x7b-32768",
@@ -483,7 +889,7 @@ async function getQuery(location) {
     }
     catch (error) {
         console.log(error);
-        return exampleresponse
+        return exampleresponseKerela
     }
 }
 async function getDayWiseQuery(location) {
