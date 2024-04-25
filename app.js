@@ -908,7 +908,7 @@ const DayWiseSchema = {
 };
 async function getQuery(location) {
     // Pretty printing improves completion results.
-    const jsonSchema = JSON.stringify(newSchema, null, 4);
+    const jsonSchema = JSON.stringify(schema, null, 4);
     try {
         const chat_completion = await groq.chat.completions.create({
             messages: [
