@@ -800,6 +800,73 @@ const schema = {
     title: "Travel Itinerary",
     type: "object"
 };
+
+const newSchema = {
+
+    places: [{
+        name: {
+            type: "string",
+        },
+        location: {
+            type: "string",
+        },
+        image_link: {
+            type: "string",
+        },
+        description: {
+            type: "string",
+        },
+        attraction: {
+            type: "string",
+        },
+        VisitTime: {
+            type: "string",
+        },
+        childrenAllowed: {
+            type: "string",
+        },
+    }
+    ],
+    dayWiseItenary: [
+        {
+            day: {
+                type: "string"
+            },
+            places: [
+                {
+                    type: "string",
+                }
+            ]
+        }
+    ],
+    totalTravelTime: {
+        type: "string"
+    },
+    hotels: [{
+        type: "String"
+    }]
+    ,
+    estimatedCost: {
+        accomodation: {
+            type: "String",
+        },
+        activities: {
+            type: "String",
+        },
+        food: {
+            type: "String",
+        },
+        transport: {
+            type: "String",
+        }
+    },
+    experiences: [{ type: "string" }
+    ],
+    transport: [{ type: "string" }
+    ],
+};
+
+
 const DayWiseSchema = {
     items: {
         required: [
@@ -841,7 +908,7 @@ const DayWiseSchema = {
 };
 async function getQuery(location) {
     // Pretty printing improves completion results.
-    const jsonSchema = JSON.stringify(schema, null, 4);
+    const jsonSchema = JSON.stringify(newSchema, null, 4);
     try {
         const chat_completion = await groq.chat.completions.create({
             messages: [
