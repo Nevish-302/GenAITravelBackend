@@ -293,93 +293,75 @@ const daywiseExample = {
     "items": [
         {
             "day": "Day 1",
-            "time": "10:00 AM",
-            "name": "Jailalita",
-            "task": "Arrival and check-in at hotel",
-            "budget": "N/A",
-            "image_link": "https://link-to-hotel-image",
-            "location": "Mumbai"
+            "time": "12:00 - 14:00",
+            "name": "Check-in and Relax",
+            "task": "Check into your hotel and relax after your flight. Take this time to unpack and unwind.",
+            "image_link": "https://images.pexels.com/photos/3856050/pexels-photo-3856050.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "Included in accommodation",
+            "location": "Hotel, Mumbai"
         },
         {
             "day": "Day 1",
-            "time": "12:00 PM",
-            "name": "Jailalita",
-            "task": "Lunch at a local restaurant",
-            "budget": "500 INR",
-            "image_link": "https://link-to-restaurant-image",
-            "location": "Mumbai"
-        },
-        {
-            "day": "Day 1",
-            "time": "2:00 PM",
-            "name": "Jailalita",
-            "task": "City tour of Mumbai",
-            "budget": "1000 INR",
-            "image_link": "https://link-to-tour-image",
+            "time": "16:00 - 19:00",
+            "name": "City Tour",
+            "task": "Explore the city of Mumbai and visit popular landmarks such as the Gateway of India and the Marine Drive.",
+            "image_link": "https://images.pexels.com/photos/3760257/pexels-photo-3760257.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "Free",
             "location": "Mumbai"
         },
         {
             "day": "Day 2",
-            "time": "8:00 AM",
-            "name": "Jailalita",
-            "task": "Hiking at Sanjay Gandhi National Park",
-            "budget": "1500 INR",
-            "image_link": "https://link-to-hiking-image",
-            "location": "Mumbai"
+            "time": "09:00 - 17:00",
+            "name": "Hiking at Karnala",
+            "task": "Go on a hiking adventure at Karnala Bird Sanctuary. Enjoy the beautiful scenery and spot some unique bird species.",
+            "image_link": "https://images.pexels.com/photos/22484084/pexels-photo-22484084.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "500 INR",
+            "location": "Karnala Bird Sanctuary"
         },
         {
             "day": "Day 3",
-            "time": "10:00 AM",
-            "name": "Jailalita",
-            "task": "Rafting at Kolad",
-            "budget": "3000 INR",
-            "image_link": "https://link-to-rafting-image",
+            "time": "10:00 - 16:00",
+            "name": "Rafting Adventure",
+            "task": "Experience an exhilarating rafting adventure at Kolad. Enjoy the thrill of rafting on the Kundalika River.",
+            "image_link": "https://images.pexels.com/photos/2348108/pexels-photo-2348108.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "2000 INR",
             "location": "Kolad"
         },
         {
             "day": "Day 4",
-            "time": "9:00 AM",
-            "name": "Jailalita",
-            "task": "Skydiving at Aamby Valley",
-            "budget": "25000 INR",
-            "image_link": "https://link-to-skydiving-image",
-            "location": "Aamby Valley"
+            "time": "14:00 - 18:00",
+            "name": "Chess Club",
+            "task": "Visit a local chess club and challenge some local players to a game. Alternatively, you can also play cricket or swim.",
+            "image_link": "https://images.pexels.com/photos/4390518/pexels-photo-4390518.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "Free",
+            "location": "Mumbai"
         },
         {
             "day": "Day 5",
-            "time": "10:00 AM",
-            "name": "Jailalita",
-            "task": "Chess tournament at Prabodhankar Thackeray Krida Sankul",
-            "budget": "500 INR",
-            "image_link": "https://link-to-chess-tournament-image",
-            "location": "Mumbai"
+            "time": "10:00 - 16:00",
+            "name": "Skydiving Experience",
+            "task": "Experience the thrill of skydiving at Mysore. Enjoy breathtaking views of the city from above.",
+            "image_link": "https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "25000 INR",
+            "location": "Mysore"
         },
         {
             "day": "Day 6",
-            "time": "9:00 AM",
-            "name": "Jailalita",
-            "task": "Cricket match at Azad Maidan",
-            "budget": "300 INR",
-            "image_link": "https://link-to-cricket-match-image",
+            "time": "18:00 - 22:00",
+            "name": "Clubbing in Mumbai",
+            "task": "Experience Mumbai's nightlife and visit one of the city's popular clubs. Dance the night away and enjoy delicious cocktails.",
+            "image_link": "https://images.pexels.com/photos/19867661/pexels-photo-19867661.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "3000 INR",
             "location": "Mumbai"
         },
         {
             "day": "Day 7",
-            "time": "7:00 AM",
-            "name": "Jailalita",
-            "task": "Swimming at Juhu Beach",
-            "budget": "500 INR",
-            "image_link": "https://link-to-swimming-image",
-            "location": "Mumbai"
-        },
-        {
-            "day": "Day 7",
-            "time": "8:00 PM",
-            "name": "Jailalita",
-            "task": "Clubbing at Trilogy",
-            "budget": "2000 INR",
-            "image_link": "https://link-to-club-image",
-            "location": "Mumbai"
+            "time": "12:00 - 14:00",
+            "name": "Check-out and Departure",
+            "task": "Check-out of your hotel and depart from Mumbai. Safe travels!",
+            "image_link": "https://images.pexels.com/photos/4247725/pexels-photo-4247725.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "budget": "Included in accommodation",
+            "location": "Hotel, Mumbai"
         }
     ]
 }
