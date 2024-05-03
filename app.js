@@ -1119,14 +1119,12 @@ async function getQuery(location) {
         }
         //response.places = Places
         console.log("Json-------------------->", response, response.dayWiseItinerary)
-        //console.log("JSON response --------------------------------", JSON.parse(chat_completion.choices[0].message.content))
-        //return Object.assign(new Recipe(), JSON.parse(chat_completion.choices[0].message.content));
 
         return response
     }
     catch (error) {
         console.log(error);
-        return exampleresponseKerela
+        return responsewithloc
     }
 }
 async function getDayWiseQuery(location) {
