@@ -289,7 +289,100 @@ const exampleresponseDelhi = {
         ]
     }
 }
-
+const daywiseExample = {
+    "items": [
+        {
+            "day": "Day 1",
+            "time": "10:00 AM",
+            "name": "Jailalita",
+            "task": "Arrival and check-in at hotel",
+            "budget": "N/A",
+            "image_link": "https://link-to-hotel-image",
+            "location": "Mumbai"
+        },
+        {
+            "day": "Day 1",
+            "time": "12:00 PM",
+            "name": "Jailalita",
+            "task": "Lunch at a local restaurant",
+            "budget": "500 INR",
+            "image_link": "https://link-to-restaurant-image",
+            "location": "Mumbai"
+        },
+        {
+            "day": "Day 1",
+            "time": "2:00 PM",
+            "name": "Jailalita",
+            "task": "City tour of Mumbai",
+            "budget": "1000 INR",
+            "image_link": "https://link-to-tour-image",
+            "location": "Mumbai"
+        },
+        {
+            "day": "Day 2",
+            "time": "8:00 AM",
+            "name": "Jailalita",
+            "task": "Hiking at Sanjay Gandhi National Park",
+            "budget": "1500 INR",
+            "image_link": "https://link-to-hiking-image",
+            "location": "Mumbai"
+        },
+        {
+            "day": "Day 3",
+            "time": "10:00 AM",
+            "name": "Jailalita",
+            "task": "Rafting at Kolad",
+            "budget": "3000 INR",
+            "image_link": "https://link-to-rafting-image",
+            "location": "Kolad"
+        },
+        {
+            "day": "Day 4",
+            "time": "9:00 AM",
+            "name": "Jailalita",
+            "task": "Skydiving at Aamby Valley",
+            "budget": "25000 INR",
+            "image_link": "https://link-to-skydiving-image",
+            "location": "Aamby Valley"
+        },
+        {
+            "day": "Day 5",
+            "time": "10:00 AM",
+            "name": "Jailalita",
+            "task": "Chess tournament at Prabodhankar Thackeray Krida Sankul",
+            "budget": "500 INR",
+            "image_link": "https://link-to-chess-tournament-image",
+            "location": "Mumbai"
+        },
+        {
+            "day": "Day 6",
+            "time": "9:00 AM",
+            "name": "Jailalita",
+            "task": "Cricket match at Azad Maidan",
+            "budget": "300 INR",
+            "image_link": "https://link-to-cricket-match-image",
+            "location": "Mumbai"
+        },
+        {
+            "day": "Day 7",
+            "time": "7:00 AM",
+            "name": "Jailalita",
+            "task": "Swimming at Juhu Beach",
+            "budget": "500 INR",
+            "image_link": "https://link-to-swimming-image",
+            "location": "Mumbai"
+        },
+        {
+            "day": "Day 7",
+            "time": "8:00 PM",
+            "name": "Jailalita",
+            "task": "Clubbing at Trilogy",
+            "budget": "2000 INR",
+            "image_link": "https://link-to-club-image",
+            "location": "Mumbai"
+        }
+    ]
+}
 const exampleresponseKerela = {
     "status": "success",
     "data": {
@@ -1129,48 +1222,54 @@ async function getQuery(location) {
 }
 async function getDayWiseQuery(location) {
     // Pretty printing improves completion results.
-    const jsonSchema = JSON.stringify(DayWiseSchema, null, 4);
-    const chat_completion = await groq.chat.completions.create({
-        messages: [
-            {
-                role: "system",
-                content: `You provide answers in JSON ${jsonSchema}`
-            },
-            {
-                role: "user",
-                content: `Fetch a travel itenary for ${location}. a`
-            }
-        ],
-        model: "mixtral-8x7b-32768",
-        temperature: 1,
-        stream: false,
-        max_tokens: 10000,
-        response_format: {
-            type: "json_object"
-        }
-    });
-    const response = JSON.parse(chat_completion.choices[0].message.content)
-    // const Places = await response.places.map(async (place) => {
-    //     const query = place.name
-    //     const photos = await client.photos.search({ query, per_page: 1 })
-    //     return { ...place, image_link: photos.photos[0].url }
-    // })
     try {
-        for (let place of response.items) {
-            const query = place.name
-            const photos = await client.photos.search({ query, per_page: 1 })
-            console.log(query)
-            place.image_link = photos.photos[0].src.large
+        const jsonSchema = JSON.stringify(DayWiseSchema, null, 4);
+        const chat_completion = await groq.chat.completions.create({
+            messages: [
+                {
+                    role: "system",
+                    content: `You provide answers in JSON ${jsonSchema}`
+                },
+                {
+                    role: "user",
+                    content: `Fetch a travel itenary for ${location}. a`
+                }
+            ],
+            model: "mixtral-8x7b-32768",
+            temperature: 1,
+            stream: false,
+            max_tokens: 10000,
+            response_format: {
+                type: "json_object"
+            }
+        });
+        const response = JSON.parse(chat_completion.choices[0].message.content)
+        // const Places = await response.places.map(async (place) => {
+        //     const query = place.name
+        //     const photos = await client.photos.search({ query, per_page: 1 })
+        //     return { ...place, image_link: photos.photos[0].url }
+        // })
+        try {
+            for (let place of response.items) {
+                const query = place.name
+                const photos = await client.photos.search({ query, per_page: 1 })
+                console.log(query)
+                place.image_link = photos.photos[0].src.large
+            }
         }
+        catch (error) {
+            console.log(error)
+        }
+        //response.places = Places
+        console.log("Json-------------------->", response)
+        //console.log("JSON response --------------------------------", JSON.parse(chat_completion.choices[0].message.content))
+        //return Object.assign(new Recipe(), JSON.parse(chat_completion.choices[0].message.content));
+        return response
     }
     catch (error) {
         console.log(error)
+        return daywiseExample
     }
-    //response.places = Places
-    console.log("Json-------------------->", response)
-    //console.log("JSON response --------------------------------", JSON.parse(chat_completion.choices[0].message.content))
-    //return Object.assign(new Recipe(), JSON.parse(chat_completion.choices[0].message.content));
-    return response
 }
 router.post('/query', async (req, res) => {
     const { query } = await req.body
