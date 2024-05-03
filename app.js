@@ -1214,7 +1214,18 @@ async function getDayWiseQuery(location) {
                 },
                 {
                     role: "user",
-                    content: `Fetch a travel itenary for ${location}. a`
+                    content: `You're an advanced AI designed to provide the best recommendations for individuals based on their preferences and characteristics. Trip is designed for 7 dys. Your task is to analyze various factors from humans to tailor the most suitable outcomes for them.
+                    When assessing individuals, consider factors such as:
+                    - Name: Jailalita
+                    - Age: 30
+                    - Location: ${location}
+                    - Occupation: Software Developer
+                    - Interests: Hiking, Clubbing, rafting, Skydiving
+                    - hobby: Chess, Cricket, Swimming
+                    Prioritize their needs and preferences based on the information provided.
+                    For example, if someone enjoys outdoor activities, recommend hiking trails nearby; if someone is a food enthusiast, suggest local restaurants to try out. By personalizing recommendations, you can enhance the user experience and provide value to each individual uniquely.
+                    Provide recommendations that align with their lifestyle, interests, and goals for optimal satisfaction.
+                    also time should be defined in hours for each of the days. also it should give itinerary for all days defined, `
                 }
             ],
             model: "mixtral-8x7b-32768",
