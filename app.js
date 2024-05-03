@@ -4,7 +4,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const Groq = require("groq-sdk");
-const groq = new Groq({ apiKey: "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" });
+const groq = new Groq({ apiKey: "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" });
 const { createClient } = require('pexels');
 const router = express.Router();
 
@@ -709,6 +709,14 @@ const schema = {
                         type: "string",
                         title: "name"
                     },
+                    longitude: {
+                        type: "string",
+                        title: "longitude",
+                    },
+                    latitude: {
+                        type: "string",
+                        title: "latitude",
+                    },
                     location: {
                         type: "string",
                         title: "location "
@@ -808,6 +816,12 @@ const newSchema = {
             type: "string",
         },
         location: {
+            type: "string",
+        },
+        longitude: {
+            type: "string",
+        },
+        latitude: {
             type: "string",
         },
         image_link: {
